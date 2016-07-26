@@ -3,14 +3,21 @@ default: tmp/Sega\ -\ Saturn.dat
 tmp:
 	mkdir tmp
 
-tmp/saturn.zip: tmp
-	wget -O tmp/saturn.zip http://redump.org/datfile/ss/
+tmp/redump.zip: tmp
+	wget -O tmp/redump.zip http://redump.org/datfile/ss/
 
-tmp/saturn.xml: tmp/saturn.zip
-	unzip tmp/saturn.zip -d tmp
-	mv tmp/*.dat tmp/saturn.xml
+tmp/tosec.zip: tmp
+	wget -O tmp/tosec.zip http://www.tosecdev.org/downloads/category/37-2016-07-02?download=73:tosec-dat-pack-complete-2313-tosec-v2016-07-02
 
-tmp/Sega\ -\ Saturn.dat: tmp/saturn.xml
+tmp/redump.xml: tmp/redump.zip
+	unzip tmp/redump.zip -d tmp
+	mv tmp/*.dat tmp/redump.xml
+
+tmp/tosec.xml: tmp/tosec.zip
+	unzip tmp/tosec.zip -d tmp
+	mv tmp/TOSEC-ISO/Sega\ Saturn\ -\ Games* tmp/tosec.xml
+
+tmp/Sega\ -\ Saturn.dat: tmp/redump.xml tmp/tosec.xml
 	node .
 
 clean:
