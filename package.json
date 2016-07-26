@@ -1,0 +1,26 @@
+{
+  "name": "libretro-database-sega-saturn",
+  "version": "0.0.1",
+  "description": "libretro-database's Sega - Saturn.dat, built from Redump.org",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobLoach/libretro-database-sega-saturn.git"
+  },
+  "author": "Rob Loach (http://robloach.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobLoach/libretro-database-sega-saturn/issues"
+  },
+  "engines" : {
+    "node" : ">=6"
+  },
+  "homepage": "https://github.com/RobLoach/libretro-database-sega-saturn",
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  }
+}
