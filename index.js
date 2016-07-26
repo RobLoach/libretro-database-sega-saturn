@@ -1,6 +1,7 @@
 const fs = require('fs')
 var xml = require('xml2js').Parser()
 var pkg = require('./package')
+var games = []
 
 // Read the XML file.
 fs.readFile('tmp/saturn.xml', function (err, data) {
@@ -23,7 +24,7 @@ fs.readFile('tmp/saturn.xml', function (err, data) {
 			// Find Track 1, since that is the only one to load.
 			for (var x in game.rom) {
 				var rom = game.rom[x]['$']
-				if (rom.name.indexOf('Track 1') >= 0) {
+				if (rom.name.indexOf('(Track 1)') >= 0 || rom.name.indexOf('(Track 01)') >= 0) {
 					// Output the rom entry.
 					output += `\ngame (
 	name "${game.description[0]}"
