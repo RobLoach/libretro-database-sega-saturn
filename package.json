@@ -1,7 +1,7 @@
 {
   "name": "libretro-database-sega-saturn",
-  "version": "0.0.1",
-  "description": "libretro-database's Sega - Saturn.dat, built from Redump.org",
+  "version": "0.1.0",
+  "description": "libretro-database's Sega - Saturn.dat",
   "private": true,
   "main": "index.js",
   "scripts": {
