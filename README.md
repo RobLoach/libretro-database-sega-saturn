@@ -1,12 +1,18 @@
 # libretro-sega-saturn.dat
 
-This builds [RetroArch](http://www.libretro.com/)'s [`Sega - Saturn.dat`](https://github.com/libretro/libretro-database/blob/master/dat/Sega%20-%20Saturn.dat) for [libretro-database](https://github.com/libretro/libretro-database), built off of the DAT from [redump.org](http://redump.org).
+This builds [RetroArch](http://www.libretro.com/)'s [`Sega - Saturn.dat`](https://github.com/libretro/libretro-database/blob/master/dat/Sega%20-%20Saturn.dat) for [libretro-database](https://github.com/libretro/libretro-database).
+
+## Sources
+
+- [redump.org](http://redump.org)
+- [TOSEC](http://tosecdev.org)
 
 ## Dependencies
 
-- Node 6
+- [Node.js](http://nodejs.org) 6
 - `make`
 - `unzip`
+- `wget`
 
 ## Usage
 
