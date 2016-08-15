@@ -91,10 +91,7 @@ function getGamesFromXml(result) {
 		// Find Track 1, since that is the only one to load.
 		for (var x in game.rom) {
 			var rom = game.rom[x]['$']
-			if (rom.name.indexOf('(Track 1)') >= 0 ||
-				rom.name.indexOf('(Track 01)') >= 0 ||
-				rom.name.indexOf('(Track 01 of') >= 0 ||
-				rom.name.indexOf('(Track 1 of') >= 0) {
+			if (rom.name.indexOf('.cue') >= 0) {
 				out[game.description[0]] = rom
 				break
 			}
